@@ -4,7 +4,7 @@ namespace Djmitry\Image;
 
 use Djmitry\Image\ImageService;
 
-class ImageTrait
+trait ImageTrait
 {
     public function imageUrl()
     {
