@@ -13,7 +13,6 @@ class ImageService
         $img->fit($w, $h, function($constraint) {
             //$constraint->upSize();
         });
-        //echo $cache_path; exit;
         $img->save($cache_path . $img->basename);
     }
 }
