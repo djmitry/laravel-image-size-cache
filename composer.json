@@ -1,5 +1,6 @@
 {
     "name": "djmitry/laravel-image-size-cache",
+    "description": "Настраиваемый размер картинки и её кэширование",
     "type": "library",
     "license": "MIT",
     "authors": [
