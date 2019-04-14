@@ -14,6 +14,8 @@ trait ImageTrait
         } else {
             $cache_file = $this->$field;
         }
+
+        $cache_file = str_replace('.', "{$w}x{$h}.", $cache_file);
         
         $cache_dir = 'storage/cache/';
         if (!file_exists(public_path($cache_dir) . $cache_file)) {

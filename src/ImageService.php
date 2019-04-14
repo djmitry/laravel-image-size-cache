@@ -13,6 +13,7 @@ class ImageService
         $img->fit($w, $h, function($constraint) {
             //$constraint->upSize();
         });
-        $img->save($cache_path . $img->basename);
+        $cache_file = str_replace('.', "{$w}x{$h}.", $img->basename);
+        $img->save($cache_path . $cache_file);
     }
 }
