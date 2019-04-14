@@ -9,3 +9,7 @@ $ composer require djmitry/laravel-image-size-cache
 ```
 
 # Использование
+Путь изображения хранится в поле image_path, ширина 300, высота 200
+```bash
+<img src="{{ $article->image('image_path', 300, 200) }}">
+```

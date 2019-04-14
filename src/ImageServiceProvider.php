@@ -10,5 +10,5 @@ class ImageServiceProvider extends ServiceProvider
     public function boot()
     {
         Storage::makeDirectory('public/cache');
-    }
+    }   
 }
