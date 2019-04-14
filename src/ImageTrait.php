@@ -6,13 +6,13 @@ use Djmitry\Image\ImageService;
 
 trait ImageTrait
 {
-    public function image(int $w = 100, int $h = 100)
+    public function image(string $field, int $w = 100, int $h = 100)
     {
         $path = '/storage/images/cache';
-        if (!file_exists(public_path('storage/images/cache/') . $this->image)) {
+        if (!file_exists(public_path('storage/images/cache/') . $this->$field)) {
             $imageService = new ImageService();
-            $imageService->resize($this->image, $w, $h);
+            $imageService->resize($this->$field, $w, $h);
         }
-        return asset('storage/images/cache/' . $this->image);
+        return asset('storage/images/cache/' . $this->$field);
     }
 }
